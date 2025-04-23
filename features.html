@@ -11,6 +11,60 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
+    <style>
+        .advanced-feature-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .advanced-feature-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+                circle at center,
+                rgba(220, 20, 60, 0.05) 0%,
+                rgba(30, 144, 255, 0.05) 100%
+            );
+            z-index: 0;
+        }
+        
+        .advanced-feature-image:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .advanced-feature-image svg {
+            position: relative;
+            z-index: 1;
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+        
+        .advanced-feature-image:hover svg {
+            transform: scale(1.05);
+        }
+        
+        .dark-theme .advanced-feature-image {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        
+        .light-theme .advanced-feature-image {
+            background: rgba(0, 0, 0, 0.02);
+        }
+    </style>
 </head>
 <body class="dark-theme">
     <!-- Loading Screen -->
@@ -43,7 +97,7 @@
                         <a href="about-us.html" class="nav-link">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+                        <a href="testimonials.html" class="nav-link">Testimonials</a>
                     </li>
                     <li class="nav-item">
                         <a href="get-started.html" class="nav-link">Get Started</a>
@@ -243,7 +297,9 @@
                             <li>Conceptual explanations tied to each step</li>
                         </ul>
                     </div>
-                    <div class="advanced-feature-image placeholder"></div>
+                    <div class="advanced-feature-image">
+                        <img src="img/advanced-problem-solving.svg" alt="Problem-Solving Assistant" class="advanced-feature-svg">
+                    </div>
                 </div>
                 
                 <div class="advanced-feature reverse">
@@ -257,7 +313,9 @@
                             <li>Real-world application examples</li>
                         </ul>
                     </div>
-                    <div class="advanced-feature-image placeholder"></div>
+                    <div class="advanced-feature-image">
+                        <img src="img/advanced-concept-explorer.svg" alt="Concept Explorer" class="advanced-feature-svg">
+                    </div>
                 </div>
                 
                 <div class="advanced-feature">
@@ -272,7 +330,9 @@
                             <li>Calendar integration</li>
                         </ul>
                     </div>
-                    <div class="advanced-feature-image placeholder"></div>
+                    <div class="advanced-feature-image">
+                        <img src="img/advanced-study-planner.svg" alt="Study Session Planner" class="advanced-feature-svg">
+                    </div>
                 </div>
                 
                 <div class="advanced-feature reverse">
@@ -287,7 +347,9 @@
                             <li>Strategic review prioritization</li>
                         </ul>
                     </div>
-                    <div class="advanced-feature-image placeholder"></div>
+                    <div class="advanced-feature-image">
+                        <img src="img/advanced-exam-prep.svg" alt="Exam Preparation Engine" class="advanced-feature-svg">
+                    </div>
                 </div>
             </div>
         </section>

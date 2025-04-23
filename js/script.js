@@ -8,10 +8,29 @@ window.addEventListener('load', () => {
     
     // Hide loader after 1 second
     setTimeout(() => {
-        loaderContainer.classList.add('loader-hidden');
-        // Re-enable scrolling after loading completes
-        document.body.style.overflow = '';
+        if (loaderContainer) {
+            loaderContainer.style.opacity = '0';
+            setTimeout(() => {
+                loaderContainer.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                // Apply animation classes after page load
+                applyAnimations();
+            }, 500);
+        } else {
+            document.body.style.overflow = 'auto';
+            // Apply animation classes after page load
+            applyAnimations();
+        }
     }, 1000);
+});
+
+// Also make sure the loader is hidden if the load event already fired
+document.addEventListener('DOMContentLoaded', () => {
+    if (loaderContainer && document.readyState === 'complete') {
+        loaderContainer.classList.add('loader-hidden');
+        loaderContainer.style.display = 'none';
+        document.body.style.overflow = '';
+    }
 });
 
 // Set current year in footer
@@ -348,4 +367,266 @@ if (dashboardPreview) {
             }, 500);
         }
     });
-} 
+}
+
+// Set Current Year in Footer
+document.addEventListener('DOMContentLoaded', function() {
+    const yearElement = document.querySelector('.current-year');
+    if (yearElement) {
+        const currentYear = new Date().getFullYear();
+        yearElement.textContent = currentYear;
+    }
+    
+    // Apply the saved theme on page load
+    applyTheme();
+    
+    // Add animation classes to elements
+    applyAnimations();
+});
+
+// Theme Toggle
+function applyTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const htmlElement = document.documentElement;
+    const themeToggleButton = document.querySelector('.theme-toggle button');
+    
+    if (savedTheme === 'light') {
+        htmlElement.classList.remove('dark-theme');
+        htmlElement.classList.add('light-theme');
+        
+        // Update button text and icon if element exists
+        if (themeToggleButton) {
+            const iconElement = themeToggleButton.querySelector('i');
+            const textElement = themeToggleButton.querySelector('span');
+            
+            if (iconElement) {
+                iconElement.className = 'fas fa-moon';
+            }
+            if (textElement) {
+                textElement.textContent = 'Dark Mode';
+            }
+        }
+    } else {
+        htmlElement.classList.remove('light-theme');
+        htmlElement.classList.add('dark-theme');
+        
+        // Update button text and icon if element exists
+        if (themeToggleButton) {
+            const iconElement = themeToggleButton.querySelector('i');
+            const textElement = themeToggleButton.querySelector('span');
+            
+            if (iconElement) {
+                iconElement.className = 'fas fa-sun';
+            }
+            if (textElement) {
+                textElement.textContent = 'Light Mode';
+            }
+        }
+    }
+}
+
+function toggleTheme() {
+    const htmlElement = document.documentElement;
+    const themeToggleButton = document.querySelector('.theme-toggle button');
+    const iconElement = themeToggleButton.querySelector('i');
+    const textElement = themeToggleButton.querySelector('span');
+    
+    if (htmlElement.classList.contains('dark-theme')) {
+        localStorage.setItem('theme', 'light');
+        htmlElement.classList.remove('dark-theme');
+        htmlElement.classList.add('light-theme');
+        
+        if (iconElement) {
+            iconElement.className = 'fas fa-moon';
+        }
+        if (textElement) {
+            textElement.textContent = 'Dark Mode';
+        }
+    } else {
+        localStorage.setItem('theme', 'dark');
+        htmlElement.classList.remove('light-theme');
+        htmlElement.classList.add('dark-theme');
+        
+        if (iconElement) {
+            iconElement.className = 'fas fa-sun';
+        }
+        if (textElement) {
+            textElement.textContent = 'Light Mode';
+        }
+    }
+}
+
+// Add event listener to theme toggle button
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggleButton = document.querySelector('.theme-toggle button');
+    if (themeToggleButton) {
+        themeToggleButton.addEventListener('click', toggleTheme);
+    }
+});
+
+// Navbar Scroll Effect
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        if (window.scrollY > 20) {
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+        }
+    }
+});
+
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const authButtons = document.querySelector('.auth-buttons');
+    
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            
+            if (authButtons) {
+                authButtons.classList.toggle('mobile-active');
+            }
+            
+            // Toggle menu icon
+            const menuIcon = menuToggle.querySelector('i');
+            if (menuIcon) {
+                if (menuIcon.classList.contains('fa-bars')) {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-times');
+                } else {
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
+            }
+        });
+    }
+});
+
+// Animations
+function applyAnimations() {
+    // Apply animations with delay to elements with animation classes
+    const animatedElements = document.querySelectorAll('.slide-up, .fade-in, .slide-in-left, .slide-in-right');
+    
+    // Set up Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    // Observe each element
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+    
+    // Apply animations for testimonial cards
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    let delay = 0;
+    
+    testimonialCards.forEach(card => {
+        setTimeout(() => {
+            card.classList.add('animated');
+        }, delay);
+        delay += 150;
+    });
+}
+
+// Floating Background Animation
+document.addEventListener('DOMContentLoaded', function() {
+    const bg = document.querySelector('.floating-bg');
+    if (bg) {
+        document.addEventListener('mousemove', function(e) {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            bg.style.transform = `translate(${x * 20}px, ${y * 20}px)`;
+        });
+    }
+});
+
+// Password visibility toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+    
+    if (togglePassword && passwordInput) {
+        togglePassword.addEventListener('click', function() {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            // Toggle icon
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+    }
+});
+
+// Testimonial filter functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    
+    if (filterButtons.length > 0 && testimonialCards.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                
+                // Filter testimonials
+                testimonialCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        if (card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                    
+                    // Remove and re-add animation class for smooth transition
+                    card.classList.remove('animated');
+                    setTimeout(() => {
+                        card.classList.add('animated');
+                    }, 10);
+                });
+            });
+        });
+    }
+});
+
+// Rating star functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const ratingStars = document.querySelectorAll('.rating-stars span');
+    const ratingInput = document.getElementById('rating');
+    
+    if (ratingStars.length > 0 && ratingInput) {
+        ratingStars.forEach((star, index) => {
+            star.addEventListener('click', function() {
+                // Set rating value
+                const ratingValue = index + 1;
+                ratingInput.value = ratingValue;
+                
+                // Update stars display
+                ratingStars.forEach((s, i) => {
+                    if (i < ratingValue) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+            });
+        });
+    }
+}); 

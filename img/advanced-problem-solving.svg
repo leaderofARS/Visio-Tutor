@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="problemSolvingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#DC143C" />
+            <stop offset="100%" stop-color="#8A2BE2" />
+        </linearGradient>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feFlood flood-color="rgba(0,0,0,0.2)" result="color"/>
+            <feComposite in="color" in2="blur" operator="in" result="shadow"/>
+            <feComposite in="SourceGraphic" in2="shadow" operator="over"/>
+        </filter>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle fill="#F5F7FF" cx="80" cy="80" r="70"></circle>
+        
+        <!-- Main chat bubble -->
+        <path d="M50,40 L110,40 C116.627,40 122,45.373 122,52 L122,108 C122,114.627 116.627,120 110,120 L90,120 L72,140 L72,120 L50,120 C43.373,120 38,114.627 38,108 L38,52 C38,45.373 43.373,40 50,40 Z" 
+              stroke="url(#problemSolvingGradient)" 
+              stroke-width="4" 
+              fill="#FFFFFF"
+              filter="url(#shadow)"></path>
+        
+        <!-- Math symbols -->
+        <path d="M80,60 L80,70" stroke="#1E90FF" stroke-width="4" stroke-linecap="round"></path>
+        <path d="M75,65 L85,65" stroke="#1E90FF" stroke-width="4" stroke-linecap="round"></path>
+        
+        <path d="M60,85 L70,95" stroke="#DC143C" stroke-width="4" stroke-linecap="round"></path>
+        <path d="M70,85 L60,95" stroke="#DC143C" stroke-width="4" stroke-linecap="round"></path>
+        
+        <path d="M95,85 L105,85" stroke="#8A2BE2" stroke-width="4" stroke-linecap="round"></path>
+        <path d="M100,90 L100,80" stroke="#8A2BE2" stroke-width="4" stroke-linecap="round"></path>
+        
+        <!-- Small chat bubbles -->
+        <circle fill="#DC143C" cx="55" cy="112" r="5"></circle>
+        <circle fill="#1E90FF" cx="70" cy="112" r="5"></circle>
+        <circle fill="#8A2BE2" cx="85" cy="112" r="5"></circle>
+        <circle fill="#4CAF50" cx="100" cy="112" r="5"></circle>
+        
+        <!-- Connecting lines -->
+        <path d="M55,100 C55,90 65,90 65,80" stroke="#DC143C" stroke-width="2" stroke-linecap="round" stroke-dasharray="2,2"></path>
+        <path d="M80,100 C80,90 80,90 80,80" stroke="#1E90FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="2,2"></path>
+        <path d="M100,100 C100,90 95,90 95,80" stroke="#8A2BE2" stroke-width="2" stroke-linecap="round" stroke-dasharray="2,2"></path>
+    </g>
+</svg> 

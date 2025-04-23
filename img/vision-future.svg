@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="400" viewBox="0 0 500 400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#DC143C" stop-opacity="0.8" />
+            <stop offset="100%" stop-color="#87CEEB" stop-opacity="0.8" />
+        </linearGradient>
+        <linearGradient id="connectGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#DC143C" />
+            <stop offset="100%" stop-color="#87CEEB" />
+        </linearGradient>
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feFlood flood-color="#DC143C" flood-opacity="0.3" result="glow" />
+            <feComposite operator="in" in="glow" in2="blur" result="softGlow" />
+            <feComposite operator="over" in="softGlow" in2="SourceGraphic" />
+        </filter>
+    </defs>
+    
+    <!-- Background Elements -->
+    <rect width="500" height="400" fill="none" />
+    
+    <!-- Central Node -->
+    <circle cx="250" cy="200" r="40" fill="url(#circleGradient)" filter="url(#glow)" />
+    <text x="250" y="205" font-family="Arial" font-size="14" fill="white" text-anchor="middle" font-weight="bold">VISIO</text>
+    
+    <!-- Surrounding Nodes -->
+    <g id="nodeSubjects">
+        <circle cx="130" cy="120" r="25" fill="#1E1E1E" stroke="#DC143C" stroke-width="2" />
+        <text x="130" y="125" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Subjects</text>
+        <line x1="166" y1="144" x2="219" y2="174" stroke="url(#connectGradient)" stroke-width="2" />
+    </g>
+    
+    <g id="nodeAccessibility">
+        <circle cx="370" cy="120" r="25" fill="#1E1E1E" stroke="#87CEEB" stroke-width="2" />
+        <text x="370" y="125" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Access</text>
+        <line x1="334" y1="144" x2="281" y2="174" stroke="url(#connectGradient)" stroke-width="2" />
+    </g>
+    
+    <g id="nodeGlobal">
+        <circle cx="130" cy="280" r="25" fill="#1E1E1E" stroke="#87CEEB" stroke-width="2" />
+        <text x="130" y="285" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Global</text>
+        <line x1="166" y1="257" x2="219" y2="226" stroke="url(#connectGradient)" stroke-width="2" />
+    </g>
+    
+    <g id="nodeCollaboration">
+        <circle cx="370" cy="280" r="25" fill="#1E1E1E" stroke="#DC143C" stroke-width="2" />
+        <text x="370" y="285" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Collab</text>
+        <line x1="334" y1="257" x2="281" y2="226" stroke="url(#connectGradient)" stroke-width="2" />
+    </g>
+    
+    <!-- Secondary Connections -->
+    <g>
+        <line x1="130" y1="145" x2="130" y2="255" stroke="#DC143C" stroke-width="1" stroke-dasharray="4,2" />
+        <line x1="370" y1="145" x2="370" y2="255" stroke="#87CEEB" stroke-width="1" stroke-dasharray="4,2" />
+        <line x1="155" y1="120" x2="345" y2="120" stroke="#DC143C" stroke-width="1" stroke-dasharray="4,2" />
+        <line x1="155" y1="280" x2="345" y2="280" stroke="#87CEEB" stroke-width="1" stroke-dasharray="4,2" />
+    </g>
+    
+    <!-- Decorative Elements -->
+    <g>
+        <circle cx="250" cy="200" r="70" fill="none" stroke="white" stroke-width="1" opacity="0.1" />
+        <circle cx="250" cy="200" r="100" fill="none" stroke="white" stroke-width="1" opacity="0.1" />
+        <circle cx="250" cy="200" r="130" fill="none" stroke="white" stroke-width="1" opacity="0.05" />
+        <circle cx="250" cy="200" r="160" fill="none" stroke="white" stroke-width="1" opacity="0.03" />
+    </g>
+    
+    <!-- Small Floating Nodes -->
+    <g>
+        <circle cx="190" cy="150" r="6" fill="#DC143C" opacity="0.6" />
+        <circle cx="310" cy="150" r="6" fill="#87CEEB" opacity="0.6" />
+        <circle cx="190" cy="250" r="6" fill="#87CEEB" opacity="0.6" />
+        <circle cx="310" cy="250" r="6" fill="#DC143C" opacity="0.6" />
+    </g>
+    
+    <!-- Future Vision Text -->
+    <g>
+        <text x="250" cy="40" font-family="Arial" font-size="20" fill="white" text-anchor="middle" opacity="0.9">Future Vision</text>
+        <line x1="150" y1="50" x2="350" y2="50" stroke="url(#connectGradient)" stroke-width="2" opacity="0.7" />
+    </g>
+</svg> 
