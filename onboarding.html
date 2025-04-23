@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Profile | Visio Tutor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body class="dark-theme">
+    <!-- Loading Screen -->
+    <div class="loader-container">
+        <div class="loader">
+            <img src="img/visio-tutor-logo.svg" class="brand-logo" alt="Visio Tutor Logo">
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">Visio Tutor</span>
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="features.html" class="nav-link">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about-us.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="get-started.html" class="nav-link">Get Started</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="auth-buttons">
+                <a href="login.html" class="auth-link">Login</a>
+                <a href="signup.html" class="auth-button">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="theme-toggle">
+            <button id="theme-toggle-btn">
+                Light Mode
+            </button>
+        </div>
+
+        <div class="floating-background">
+            <div class="blob blob1"></div>
+            <div class="blob blob2"></div>
+            <div class="blob blob3"></div>
+            <div class="blob blob4"></div>
+            <div class="blob blob5"></div>
+            <div class="blob blob6"></div>
+            <div class="blob blob7"></div>
+            <div class="blob blob8"></div>
+            <div class="blob blob9"></div>
+            <div class="blob blob10"></div>
+        </div>
+
+        <section class="onboarding-section">
+            <div class="onboarding-container">
+                <div class="onboarding-header">
+                    <h1 class="onboarding-title">Welcome to Visio Tutor!</h1>
+                    <p class="onboarding-subtitle">Let's set up your profile to personalize your learning experience</p>
+                </div>
+
+                <div class="progress-bar-container">
+                    <div class="progress-bar">
+                        <div class="progress-indicator" style="width: 25%"></div>
+                    </div>
+                    <div class="progress-steps">
+                        <div class="progress-step active">
+                            <div class="step-number">1</div>
+                            <span class="step-name">Basic Info</span>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-number">2</div>
+                            <span class="step-name">Education</span>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-number">3</div>
+                            <span class="step-name">Subjects</span>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-number">4</div>
+                            <span class="step-name">Preferences</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="onboarding-form-container">
+                    <!-- Step 1: Basic Information -->
+                    <form id="step1" class="onboarding-form active">
+                        <div class="profile-picture-section">
+                            <div class="profile-picture-container">
+                                <div class="profile-picture-placeholder">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </div>
+                                <input type="file" id="profile-picture" class="profile-picture-input" accept="image/*">
+                            </div>
+                            <button type="button" class="upload-picture-btn">Upload Profile Picture</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="display-name">Display Name</label>
+                            <input type="text" id="display-name" name="display-name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date-of-birth">Date of Birth</label>
+                            <input type="date" id="date-of-birth" name="date-of-birth" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <div class="radio-group">
+                                <label class="radio-container">
+                                    <input type="radio" name="gender" value="male">
+                                    <span class="radio-label">Male</span>
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="gender" value="female">
+                                    <span class="radio-label">Female</span>
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="gender" value="other">
+                                    <span class="radio-label">Other</span>
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="gender" value="prefer-not-to-say">
+                                    <span class="radio-label">Prefer not to say</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bio">Short Bio (Optional)</label>
+                            <textarea id="bio" name="bio" class="form-textarea" rows="3" placeholder="Tell us a little about yourself..."></textarea>
+                        </div>
+
+                        <div class="onboarding-buttons">
+                            <button type="button" class="button primary-button" id="next-step1">Continue</button>
+                        </div>
+                    </form>
+
+                    <!-- Step 2: Education Information -->
+                    <form id="step2" class="onboarding-form">
+                        <div class="form-group">
+                            <label for="education-level">Current Education Level</label>
+                            <select id="education-level" name="education-level" class="form-select" required>
+                                <option value="" disabled selected>Select your education level</option>
+                                <option value="elementary">Elementary School</option>
+                                <option value="middle">Middle School</option>
+                                <option value="high">High School</option>
+                                <option value="undergraduate">Undergraduate</option>
+                                <option value="graduate">Graduate School</option>
+                                <option value="professional">Professional</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="school-name">School/Institution Name (Optional)</label>
+                            <input type="text" id="school-name" name="school-name" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="grade-level">Grade/Year Level</label>
+                            <select id="grade-level" name="grade-level" class="form-select" required>
+                                <option value="" disabled selected>Select your grade/year level</option>
+                                <!-- Options will be populated based on education level selection -->
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="learning-goals">Learning Goals (Select up to 3)</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="goals" value="improve-grades">
+                                    <span class="checkbox-label">Improve Grades</span>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="goals" value="test-prep">
+                                    <span class="checkbox-label">Test Preparation</span>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="goals" value="deeper-understanding">
+                                    <span class="checkbox-label">Deeper Subject Understanding</span>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="goals" value="homework-help">
+                                    <span class="checkbox-label">Homework Help</span>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="goals" value="academic-advancement">
+                                    <span class="checkbox-label">Academic Advancement</span>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="goals" value="skill-development">
+                                    <span class="checkbox-label">Skill Development</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="onboarding-buttons">
+                            <button type="button" class="button secondary-button" id="prev-step2">Back</button>
+                            <button type="button" class="button primary-button" id="next-step2">Continue</button>
+                        </div>
+                    </form>
+
+                    <!-- Step 3: Subject Preferences -->
+                    <form id="step3" class="onboarding-form">
+                        <div class="form-group">
+                            <label>Select Your Primary Subjects (Select up to 5)</label>
+                            <div class="subjects-grid">
+                                <label class="subject-card">
+                                    <input type="checkbox" name="subjects" value="mathematics">
+                                    <div class="subject-content">
+                                        <img src="img/subjects/math-icon.svg" alt="Mathematics">
+                                        <span>Mathematics</span>
+                                    </div>
+                                </label>
+                                <label class="subject-card">
+                                    <input type="checkbox" name="subjects" value="physics">
+                                    <div class="subject-content">
+                                        <img src="img/subjects/physics-icon.svg" alt="Physics">
+                                        <span>Physics</span>
+                                    </div>
+                                </label>
+                                <label class="subject-card">
+                                    <input type="checkbox" name="subjects" value="chemistry">
+                                    <div class="subject-content">
+                                        <img src="img/subjects/chemistry-icon.svg" alt="Chemistry">
+                                        <span>Chemistry</span>
+                                    </div>
+                                </label>
+                                <label class="subject-card">
+                                    <input type="checkbox" name="subjects" value="biology">
+                                    <div class="subject-content">
+                                        <img src="img/subjects/biology-icon.svg" alt="Biology">
+                                        <span>Biology</span>
+                                    </div>
+                                </label>
+                                <label class="subject-card">
+                                    <input type="checkbox" name="subjects" value="english">
+                                    <div class="subject-content">
+                                        <img src="img/subjects/english-icon.svg" alt="English">
+                                        <span>English</span>
+                                    </div>
+                                </label>
+                                <label class="subject-card">
+                                    <input type="checkbox" name="subjects" value="history">
+                                    <div class="subject-content">
+                                        <img src="img/subjects/history-icon.svg" alt="History">
+                                        <span>History</span>
+                                    </div>
+                                </label>
+                                <label class="subject-card">
+                                    <input type="checkbox" name="subjects" value="geography">
+                                    <div class="subject-content">
+                                        <img src="img/subjects/geography-icon.svg" alt="Geography">
+                                        <span>Geography</span>
+                                    </div>
+                                </label>
+                                <label class="subject-card">
+                                    <input type="checkbox" name="subjects" value="computer-science">
+                                    <div class="subject-content">
+                                        <img src="img/subjects/cs-icon.svg" alt="Computer Science">
+                                        <span>Computer Science</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="skill-level">Your Proficiency Level</label>
+                            <select id="skill-level" name="skill-level" class="form-select" required>
+                                <option value="" disabled selected>Select your overall skill level</option>
+                                <option value="beginner">Beginner - Just starting out</option>
+                                <option value="intermediate">Intermediate - Some understanding</option>
+                                <option value="advanced">Advanced - Strong knowledge</option>
+                                <option value="expert">Expert - Deep understanding</option>
+                            </select>
+                        </div>
+
+                        <div class="onboarding-buttons">
+                            <button type="button" class="button secondary-button" id="prev-step3">Back</button>
+                            <button type="button" class="button primary-button" id="next-step3">Continue</button>
+                        </div>
+                    </form>
+
+                    <!-- Step 4: Preferences -->
+                    <form id="step4" class="onboarding-form">
+                        <div class="form-group">
+                            <label>Learning Style (Select up to 2)</label>
+                            <div class="checkbox-group horizontal">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="learning-style" value="visual">
+                                    <span class="checkbox-label">Visual</span>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="learning-style" value="auditory">
+                                    <span class="checkbox-label">Auditory</span>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="learning-style" value="reading">
+                                    <span class="checkbox-label">Reading/Writing</span>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="learning-style" value="kinesthetic">
+                                    <span class="checkbox-label">Kinesthetic</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Communication Preferences</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="communication" value="email-updates" checked>
+                                    <span class="checkbox-label">Email updates about my progress</span>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="communication" value="study-reminders" checked>
+                                    <span class="checkbox-label">Study session reminders</span>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="communication" value="new-content" checked>
+                                    <span class="checkbox-label">New content notifications</span>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="communication" value="tips-tricks" checked>
+                                    <span class="checkbox-label">Learning tips and tricks</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="study-time">Preferred Study Duration</label>
+                            <select id="study-time" name="study-time" class="form-select">
+                                <option value="15min">15 minutes</option>
+                                <option value="30min" selected>30 minutes</option>
+                                <option value="45min">45 minutes</option>
+                                <option value="60min">1 hour</option>
+                                <option value="90min">1.5 hours</option>
+                                <option value="120min">2+ hours</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="study-frequency">Weekly Study Frequency</label>
+                            <select id="study-frequency" name="study-frequency" class="form-select">
+                                <option value="1-2">1-2 days per week</option>
+                                <option value="3-4" selected>3-4 days per week</option>
+                                <option value="5-6">5-6 days per week</option>
+                                <option value="7">Every day</option>
+                            </select>
+                        </div>
+
+                        <div class="onboarding-buttons">
+                            <button type="button" class="button secondary-button" id="prev-step4">Back</button>
+                            <button type="submit" class="button primary-button" id="complete-onboarding">Complete Setup</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="current-year"></span> Visio Tutor. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Upload profile picture functionality
+            const profilePictureInput = document.getElementById('profile-picture');
+            const profilePicturePlaceholder = document.querySelector('.profile-picture-placeholder');
+            const uploadButton = document.querySelector('.upload-picture-btn');
+            
+            uploadButton.addEventListener('click', function() {
+                profilePictureInput.click();
+            });
+            
+            profilePictureInput.addEventListener('change', function() {
+                if (this.files && this.files[0]) {
+                    const reader = new FileReader();
+                    
+                    reader.onload = function(e) {
+                        profilePicturePlaceholder.innerHTML = `<img src="${e.target.result}" alt="Profile Picture">`;
+                    }
+                    
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+            
+            // Education level and grade level relationship
+            const educationLevel = document.getElementById('education-level');
+            const gradeLevel = document.getElementById('grade-level');
+            
+            educationLevel.addEventListener('change', function() {
+                gradeLevel.innerHTML = '<option value="" disabled selected>Select your grade/year level</option>';
+                
+                switch(this.value) {
+                    case 'elementary':
+                        for (let i = 1; i <= 6; i++) {
+                            const option = document.createElement('option');
+                            option.value = `elementary-${i}`;
+                            option.textContent = `Grade ${i}`;
+                            gradeLevel.appendChild(option);
+                        }
+                        break;
+                    case 'middle':
+                        for (let i = 6; i <= 8; i++) {
+                            const option = document.createElement('option');
+                            option.value = `middle-${i}`;
+                            option.textContent = `Grade ${i}`;
+                            gradeLevel.appendChild(option);
+                        }
+                        break;
+                    case 'high':
+                        for (let i = 9; i <= 12; i++) {
+                            const option = document.createElement('option');
+                            option.value = `high-${i}`;
+                            option.textContent = `Grade ${i}`;
+                            gradeLevel.appendChild(option);
+                        }
+                        break;
+                    case 'undergraduate':
+                        for (let i = 1; i <= 4; i++) {
+                            const option = document.createElement('option');
+                            option.value = `undergraduate-${i}`;
+                            option.textContent = `Year ${i}`;
+                            gradeLevel.appendChild(option);
+                        }
+                        break;
+                    case 'graduate':
+                        for (let i = 1; i <= 3; i++) {
+                            const option = document.createElement('option');
+                            option.value = `graduate-${i}`;
+                            option.textContent = `Year ${i}`;
+                            gradeLevel.appendChild(option);
+                        }
+                        break;
+                    case 'professional':
+                    case 'other':
+                        const option = document.createElement('option');
+                        option.value = 'not-applicable';
+                        option.textContent = 'Not Applicable';
+                        gradeLevel.appendChild(option);
+                        break;
+                }
+            });
+            
+            // Limit checkbox selections
+            function setupCheckboxLimit(groupName, limit) {
+                const checkboxes = document.querySelectorAll(`input[name="${groupName}"]`);
+                
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', function() {
+                        const checked = document.querySelectorAll(`input[name="${groupName}"]:checked`);
+                        
+                        if (checked.length > limit) {
+                            this.checked = false;
+                        }
+                    });
+                });
+            }
+            
+            setupCheckboxLimit('goals', 3);
+            setupCheckboxLimit('subjects', 5);
+            setupCheckboxLimit('learning-style', 2);
+            
+            // Multi-step form navigation
+            function setupMultiStepForm() {
+                const steps = ['step1', 'step2', 'step3', 'step4'];
+                const progressIndicator = document.querySelector('.progress-indicator');
+                const progressSteps = document.querySelectorAll('.progress-step');
+                
+                // Next buttons
+                document.getElementById('next-step1').addEventListener('click', function() {
+                    document.getElementById('step1').classList.remove('active');
+                    document.getElementById('step2').classList.add('active');
+                    updateProgress(2);
+                });
+                
+                document.getElementById('next-step2').addEventListener('click', function() {
+                    document.getElementById('step2').classList.remove('active');
+                    document.getElementById('step3').classList.add('active');
+                    updateProgress(3);
+                });
+                
+                document.getElementById('next-step3').addEventListener('click', function() {
+                    document.getElementById('step3').classList.remove('active');
+                    document.getElementById('step4').classList.add('active');
+                    updateProgress(4);
+                });
+                
+                // Previous buttons
+                document.getElementById('prev-step2').addEventListener('click', function() {
+                    document.getElementById('step2').classList.remove('active');
+                    document.getElementById('step1').classList.add('active');
+                    updateProgress(1);
+                });
+                
+                document.getElementById('prev-step3').addEventListener('click', function() {
+                    document.getElementById('step3').classList.remove('active');
+                    document.getElementById('step2').classList.add('active');
+                    updateProgress(2);
+                });
+                
+                document.getElementById('prev-step4').addEventListener('click', function() {
+                    document.getElementById('step4').classList.remove('active');
+                    document.getElementById('step3').classList.add('active');
+                    updateProgress(3);
+                });
+                
+                // Final submit
+                document.getElementById('complete-onboarding').addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // For demo purposes - simulate form submission
+                    this.textContent = 'Setting up your profile...';
+                    this.disabled = true;
+                    
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                    }, 2000);
+                });
+                
+                function updateProgress(step) {
+                    // Update progress bar
+                    const progressPercentage = (step / steps.length) * 100;
+                    progressIndicator.style.width = `${progressPercentage}%`;
+                    
+                    // Update step indicators
+                    progressSteps.forEach((stepEl, index) => {
+                        if (index < step) {
+                            stepEl.classList.add('active');
+                        } else {
+                            stepEl.classList.remove('active');
+                        }
+                    });
+                }
+            }
+            
+            setupMultiStepForm();
+        });
+    </script>
+</body>
+</html> 

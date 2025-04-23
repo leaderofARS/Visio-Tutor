@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visio Tutor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body class="dark-theme">
+    <!-- Loading Screen -->
+    <div class="loader-container">
+        <div class="loader">
+            <img src="img/visio-tutor-logo.svg" class="brand-logo" alt="Visio Tutor Logo">
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">Visio Tutor</span>
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="features.html" class="nav-link">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about-us.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#testimonials" class="nav-link">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="get-started.html" class="nav-link">Get Started</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="auth-buttons">
+                <a href="login.html" class="auth-link">Login</a>
+                <a href="signup.html" class="auth-button">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="theme-toggle">
+            <button id="theme-toggle-btn">
+                Light Mode
+            </button>
+        </div>
+
+        <div class="floating-background">
+            <div class="blob blob1"></div>
+            <div class="blob blob2"></div>
+            <div class="blob blob3"></div>
+            <div class="blob blob4"></div>
+            <div class="blob blob5"></div>
+            <div class="blob blob6"></div>
+            <div class="blob blob7"></div>
+            <div class="blob blob8"></div>
+            <div class="blob blob9"></div>
+            <div class="blob blob10"></div>
+        </div>
+
+        <section class="hero">
+            <h1 class="title">Visio Tutor</h1>
+            <p class="description">
+                Your AI-powered learning assistant that adapts to your needs
+            </p>
+            <div class="button-group">
+                <button class="button primary-button" data-scroll="#features">Try Now</button>
+                <button class="button secondary-button" data-scroll="#about-us">Learn More</button>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <h2 class="section-title">Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card" data-delay="0">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Personalized Learning</h3>
+                    <p>Adapts to your learning style and pace to optimize your educational journey</p>
+                </div>
+
+                <div class="feature-card" data-delay="1">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Smart Content Analysis</h3>
+                    <p>Understands complex topics and breaks them down into simpler concepts</p>
+                </div>
+
+                <div class="feature-card" data-delay="2">
+                    <div class="feature-icon">📊</div>
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your improvement with detailed analytics and insights</p>
+                </div>
+
+                <div class="feature-card" data-delay="3">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Multi-Subject Support</h3>
+                    <p>Get help across various subjects and disciplines all in one place</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="random-section" id="about-us">
+            <div class="container">
+                <h2 class="section-title">About Us</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Visio Tutor was founded with a simple mission: to make learning accessible, engaging, and personalized for everyone. Our team of educators and AI specialists work together to create a seamless learning experience.</p>
+                        <p>We believe that education should adapt to each student's unique needs and learning style, not the other way around. That's why we've developed an intelligent system that evolves with you.</p>
+                    </div>
+                    <div class="animated-svg right-side talking-person">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" class="talking-person-svg">
+                            <!-- Head -->
+                            <circle cx="100" cy="70" r="40" fill="none" stroke="url(#personGradient)" stroke-width="3" />
+                            <!-- Body -->
+                            <path d="M100,110 L100,170" stroke="url(#personGradient)" stroke-width="3" stroke-linecap="round" />
+                            <!-- Arms -->
+                            <path d="M100,125 L60,140" stroke="url(#personGradient)" stroke-width="3" stroke-linecap="round" class="arm-left" />
+                            <path d="M100,125 L140,140" stroke="url(#personGradient)" stroke-width="3" stroke-linecap="round" class="arm-right" />
+                            <!-- Legs -->
+                            <path d="M100,170 L80,190" stroke="url(#personGradient)" stroke-width="3" stroke-linecap="round" />
+                            <path d="M100,170 L120,190" stroke="url(#personGradient)" stroke-width="3" stroke-linecap="round" />
+                            <!-- Face -->
+                            <circle cx="85" cy="65" r="5" fill="url(#personGradient)" />
+                            <circle cx="115" cy="65" r="5" fill="url(#personGradient)" />
+                            <!-- Mouth -->
+                            <path d="M85,85 Q100,95 115,85" stroke="url(#personGradient)" stroke-width="3" fill="none" class="mouth" />
+                            <!-- Speech Bubble -->
+                            <path d="M150,50 Q180,50 180,70 Q180,90 160,90 L140,90 L145,110 L130,90 L120,90 Q100,90 100,70 Q100,50 130,50 Z" 
+                                fill="rgba(255,255,255,0.1)" stroke="url(#personGradient)" stroke-width="2" class="speech-bubble" />
+                            <!-- Speech Lines -->
+                            <line x1="120" y1="65" x2="160" y2="65" stroke="url(#personGradient)" stroke-width="2" class="speech-line" />
+                            <line x1="125" y1="75" x2="155" y2="75" stroke="url(#personGradient)" stroke-width="2" class="speech-line-2" />
+                        </svg>
+                        <div class="gradient-defs">
+                            <svg width="0" height="0">
+                                <defs>
+                                    <linearGradient id="personGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#dc143c" />
+                                        <stop offset="100%" stop-color="#87ceeb" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="random-section testimonials" id="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Students Say</h2>
+                <div class="testimonial-content-wrapper">
+                    <div class="animated-svg left-side student-talking">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" class="student-svg">
+                            <!-- Student Figure -->
+                            <circle cx="100" cy="70" r="35" fill="none" stroke="url(#studentGradient)" stroke-width="3" />
+                            <!-- Body -->
+                            <path d="M100,105 L100,160" stroke="url(#studentGradient)" stroke-width="3" stroke-linecap="round" />
+                            <!-- Arms -->
+                            <path d="M100,120 L70,130" stroke="url(#studentGradient)" stroke-width="3" stroke-linecap="round" class="student-arm-left" />
+                            <path d="M100,120 L130,130" stroke="url(#studentGradient)" stroke-width="3" stroke-linecap="round" class="student-arm-right" />
+                            <!-- Legs -->
+                            <path d="M100,160 L85,190" stroke="url(#studentGradient)" stroke-width="3" stroke-linecap="round" />
+                            <path d="M100,160 L115,190" stroke="url(#studentGradient)" stroke-width="3" stroke-linecap="round" />
+                            <!-- Face -->
+                            <circle cx="90" cy="65" r="4" fill="url(#studentGradient)" />
+                            <circle cx="110" cy="65" r="4" fill="url(#studentGradient)" />
+                            <!-- Mouth -->
+                            <path d="M90,80 Q100,90 110,80" stroke="url(#studentGradient)" stroke-width="2.5" fill="none" class="student-mouth" />
+                            <!-- Graduation Cap -->
+                            <path d="M75,50 L125,50 L125,45 L100,35 L75,45 Z" fill="none" stroke="url(#studentGradient)" stroke-width="2" />
+                            <line x1="100" y1="35" x2="100" y2="50" stroke="url(#studentGradient)" stroke-width="2" />
+                            <!-- Speech Bubble -->
+                            <path d="M50,40 Q20,40 20,60 Q20,80 40,80 L60,80 L55,100 L70,80 L80,80 Q100,80 100,60 Q100,40 70,40 Z" 
+                                fill="rgba(255,255,255,0.1)" stroke="url(#studentGradient)" stroke-width="2" class="student-bubble" />
+                            <!-- Speech Lines -->
+                            <line x1="40" y1="55" x2="80" y2="55" stroke="url(#studentGradient)" stroke-width="2" class="student-line-1" />
+                            <line x1="45" y1="65" x2="75" y2="65" stroke="url(#studentGradient)" stroke-width="2" class="student-line-2" />
+                        </svg>
+                        <div class="gradient-defs">
+                            <svg width="0" height="0">
+                                <defs>
+                                    <linearGradient id="studentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#87ceeb" />
+                                        <stop offset="100%" stop-color="#dc143c" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="testimonial-grid">
+                        <div class="testimonial-card" data-delay="0">
+                            <div class="testimonial-content">
+                                <p>"Visio Tutor helped me understand complex math concepts that I struggled with for years. The personalized approach made all the difference!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <span class="author-name">Sarah J.</span>
+                                <span class="author-title">College Student</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-card" data-delay="1">
+                            <div class="testimonial-content">
+                                <p>"As a working professional trying to learn new skills, Visio Tutor's flexibility has been invaluable. I can study at my own pace and focus on areas I need most."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <span class="author-name">Michael T.</span>
+                                <span class="author-title">Software Engineer</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-card" data-delay="2">
+                            <div class="testimonial-content">
+                                <p>"The progress tracking feature keeps me motivated. Seeing my improvement over time encourages me to keep going!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <span class="author-name">Lena K.</span>
+                                <span class="author-title">High School Student</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="random-section cta-section" id="transform">
+            <div class="container">
+                <h2 class="section-title">Ready to Transform Your Learning?</h2>
+                <div class="cta-content">
+                    <p>Join thousands of students who have already improved their learning experience with Visio Tutor.</p>
+                    <div class="cta-buttons">
+                        <button class="button primary-button">Get Started Free</button>
+                        <button class="button secondary-button">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="current-year"></span> Visio Tutor. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

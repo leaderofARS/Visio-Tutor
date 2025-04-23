@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your Email | Visio Tutor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body class="dark-theme">
+    <!-- Loading Screen -->
+    <div class="loader-container">
+        <div class="loader">
+            <img src="img/visio-tutor-logo.svg" class="brand-logo" alt="Visio Tutor Logo">
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">Visio Tutor</span>
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="features.html" class="nav-link">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about-us.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="get-started.html" class="nav-link">Get Started</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="auth-buttons">
+                <a href="login.html" class="auth-link">Login</a>
+                <a href="signup.html" class="auth-button">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="theme-toggle">
+            <button id="theme-toggle-btn">
+                Light Mode
+            </button>
+        </div>
+
+        <div class="floating-background">
+            <div class="blob blob1"></div>
+            <div class="blob blob2"></div>
+            <div class="blob blob3"></div>
+            <div class="blob blob4"></div>
+            <div class="blob blob5"></div>
+            <div class="blob blob6"></div>
+            <div class="blob blob7"></div>
+            <div class="blob blob8"></div>
+            <div class="blob blob9"></div>
+            <div class="blob blob10"></div>
+        </div>
+
+        <section class="verification-section">
+            <div class="form-container verification-container">
+                <div class="verification-header">
+                    <img src="img/email-verify-icon.svg" alt="Email Verification" class="verification-icon">
+                    <h1 class="form-title">Verify Your Email</h1>
+                    <p class="verification-message">
+                        We've sent a verification link to <span id="user-email">your email address</span>
+                    </p>
+                </div>
+                
+                <div class="verification-instructions">
+                    <p>Please check your inbox and click the verification link to complete your registration.</p>
+                    <p class="verification-note">If you don't see the email, check your spam folder.</p>
+                </div>
+                
+                <div class="verification-code-section">
+                    <h2>Or enter the 6-digit code:</h2>
+                    <div class="verification-code-inputs">
+                        <input type="text" maxlength="1" class="code-input" data-index="1" autocomplete="off">
+                        <input type="text" maxlength="1" class="code-input" data-index="2" autocomplete="off">
+                        <input type="text" maxlength="1" class="code-input" data-index="3" autocomplete="off">
+                        <input type="text" maxlength="1" class="code-input" data-index="4" autocomplete="off">
+                        <input type="text" maxlength="1" class="code-input" data-index="5" autocomplete="off">
+                        <input type="text" maxlength="1" class="code-input" data-index="6" autocomplete="off">
+                    </div>
+                    <button id="verify-code-btn" class="button primary-button" disabled>Verify Code</button>
+                </div>
+                
+                <div class="verification-footer">
+                    <div id="resend-timer" class="resend-timer">
+                        <p>Resend code in <span id="timer-count">60</span> seconds</p>
+                    </div>
+                    <button id="resend-btn" class="button secondary-button" disabled>Resend Verification Email</button>
+                    <p class="help-text">Having trouble? <a href="contact.html" class="form-link">Contact Support</a></p>
+                    <p class="back-to-signup">
+                        <a href="signup.html" class="form-link">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Back to Sign Up
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="current-year"></span> Visio Tutor. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Display demo email
+        document.addEventListener('DOMContentLoaded', function() {
+            // For demo purposes - in a real app, you would get this from a session or URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const email = urlParams.get('email') || 'example@email.com';
+            document.getElementById('user-email').textContent = email;
+            
+            // Start countdown timer
+            startResendTimer();
+            
+            // Setup verification code inputs
+            setupVerificationInputs();
+        });
+        
+        // Verification code input handling
+        function setupVerificationInputs() {
+            const inputs = document.querySelectorAll('.code-input');
+            const verifyButton = document.getElementById('verify-code-btn');
+            
+            inputs.forEach((input, index) => {
+                // Auto-focus the first input
+                if (index === 0) {
+                    setTimeout(() => input.focus(), 500);
+                }
+                
+                // Handle input
+                input.addEventListener('input', function() {
+                    if (this.value.length === this.maxLength) {
+                        // Move focus to next input
+                        if (index < inputs.length - 1) {
+                            inputs[index + 1].focus();
+                        }
+                    }
+                    
+                    // Check if all inputs have values
+                    let allFilled = true;
+                    inputs.forEach(input => {
+                        if (!input.value) {
+                            allFilled = false;
+                        }
+                    });
+                    
+                    // Enable verify button if all inputs are filled
+                    verifyButton.disabled = !allFilled;
+                });
+                
+                // Handle backspace
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Backspace' && !this.value && index > 0) {
+                        inputs[index - 1].focus();
+                    }
+                });
+            });
+            
+            // Verify button click handler
+            verifyButton.addEventListener('click', function() {
+                let code = '';
+                inputs.forEach(input => {
+                    code += input.value;
+                });
+                
+                // For demo purposes - in a real app, you would verify this code with your backend
+                verifyButton.textContent = 'Verifying...';
+                verifyButton.disabled = true;
+                
+                // Simulate verification process
+                setTimeout(() => {
+                    window.location.href = 'onboarding.html'; // Redirect to onboarding page after successful verification
+                }, 1500);
+            });
+        }
+        
+        // Timer for resend functionality
+        function startResendTimer() {
+            const timerElement = document.getElementById('timer-count');
+            const resendButton = document.getElementById('resend-btn');
+            let seconds = 60;
+            
+            const timer = setInterval(() => {
+                seconds--;
+                timerElement.textContent = seconds;
+                
+                if (seconds <= 0) {
+                    clearInterval(timer);
+                    document.getElementById('resend-timer').style.display = 'none';
+                    resendButton.disabled = false;
+                }
+            }, 1000);
+            
+            // Resend button click handler
+            resendButton.addEventListener('click', function() {
+                // For demo purposes - in a real app, you would trigger a resend from your backend
+                this.textContent = 'Sending...';
+                this.disabled = true;
+                
+                // Simulate sending process
+                setTimeout(() => {
+                    this.textContent = 'Resend Verification Email';
+                    document.getElementById('resend-timer').style.display = 'block';
+                    seconds = 60;
+                    timerElement.textContent = seconds;
+                    startResendTimer();
+                }, 1500);
+            });
+        }
+    </script>
+</body>
+</html> 
