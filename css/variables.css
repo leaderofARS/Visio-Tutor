@@ -1,0 +1,154 @@
+:root {
+  /* Color palette */
+  --primary-color: #6D8EF7;
+  --primary-light: #A7BDFF;
+  --primary-dark: #4A65C0;
+  
+  --secondary-color: #FFC857;
+  --secondary-light: #FFE0A3;
+  --secondary-dark: #E5A82E;
+  
+  --accent-color: #FF6B6B;
+  --accent-light: #FF9B9B;
+  --accent-dark: #D14242;
+  
+  /* Neutral colors */
+  --white: #FFFFFF;
+  --light-gray-100: #F5F7FF;
+  --light-gray-200: #E6EEFF;
+  --light-gray-300: #D1DFFF;
+  --gray-400: #A4AFCE;
+  --gray-500: #6E7A9A;
+  --gray-600: #4A5568;
+  --dark-gray-700: #2D3748;
+  --dark-gray-800: #1A202C;
+  --dark-gray-900: #171923;
+  --black: #000000;
+  
+  /* Text colors */
+  --text-primary: var(--dark-gray-800);
+  --text-secondary: var(--gray-600);
+  --text-tertiary: var(--gray-500);
+  --text-on-dark: var(--white);
+  --text-on-light: var(--dark-gray-800);
+  --text-link: var(--primary-color);
+  --text-link-hover: var(--primary-dark);
+  
+  /* Background colors */
+  --bg-primary: var(--white);
+  --bg-secondary: var(--light-gray-100);
+  --bg-tertiary: var(--light-gray-200);
+  --bg-dark: var(--dark-gray-800);
+  
+  /* Border colors */
+  --border-light: var(--light-gray-200);
+  --border-medium: var(--light-gray-300);
+  --border-dark: var(--gray-400);
+  
+  /* Shadow colors and values */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+  
+  /* Spacing values */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  
+  /* Border radius */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  /* Font sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  
+  /* Font weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  
+  /* Transitions */
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
+  
+  /* Z-index values */
+  --z-0: 0;
+  --z-10: 10;
+  --z-20: 20;
+  --z-30: 30;
+  --z-40: 40;
+  --z-50: 50;
+  --z-auto: auto;
+  
+  /* Form elements */
+  --input-height: 3rem;
+  --input-border: 1px solid var(--border-medium);
+  --input-radius: var(--radius-md);
+  --input-padding: 0 var(--space-4);
+  --input-bg: var(--bg-primary);
+  --input-focus-ring: 0 0 0 3px var(--primary-light);
+  
+  /* Button properties */
+  --btn-radius: var(--radius-md);
+  --btn-padding-sm: var(--space-2) var(--space-4);
+  --btn-padding: var(--space-3) var(--space-6);
+  --btn-padding-lg: var(--space-4) var(--space-8);
+  
+  /* Auth specific variables */
+  --auth-container-width: 1100px;
+  --auth-form-width: 450px;
+  --auth-input-border: 1px solid var(--border-medium);
+  --auth-input-radius: var(--radius-lg);
+  --auth-input-focus-ring: 0 0 0 3px var(--primary-light);
+  --auth-btn-height: 3.25rem;
+  --auth-social-btn-height: 3.25rem;
+}
+
+/* Dark mode theme variables */
+.dark-theme {
+  --bg-primary: var(--dark-gray-800);
+  --bg-secondary: var(--dark-gray-700);
+  --bg-tertiary: var(--dark-gray-700);
+  
+  --text-primary: var(--white);
+  --text-secondary: var(--light-gray-200);
+  --text-tertiary: var(--light-gray-300);
+  
+  --border-light: var(--dark-gray-700);
+  --border-medium: var(--gray-600);
+  --border-dark: var(--gray-500);
+  
+  --input-bg: var(--dark-gray-700);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.2);
+} 

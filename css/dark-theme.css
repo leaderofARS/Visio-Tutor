@@ -1,0 +1,249 @@
+/* Dark theme with red and blue color palette */
+:root.dark-theme {
+  /* Color palette - Blue */
+  --primary-color: #4361ee;
+  --primary-light: #6185ff;
+  --primary-dark: #2c41bb;
+  
+  /* Color palette - Red */
+  --secondary-color: #ef233c;
+  --secondary-light: #ff5a6e;
+  --secondary-dark: #c1121f;
+  
+  /* Accent color - Purple (blend of red and blue) */
+  --accent-color: #8338ec;
+  --accent-light: #a56fff;
+  --accent-dark: #6423c0;
+  
+  /* Neutral colors - Dark theme */
+  --white: #FFFFFF;
+  --light-gray-100: #293241;
+  --light-gray-200: #242933;
+  --light-gray-300: #1f2430;
+  --gray-400: #181c24;
+  --gray-500: #14171e;
+  --gray-600: #101318;
+  --dark-gray-700: #0c0e12;
+  --dark-gray-800: #08090c;
+  --dark-gray-900: #040506;
+  --black: #000000;
+  
+  /* Text colors */
+  --text-primary: var(--white);
+  --text-secondary: #e0e0e0;
+  --text-tertiary: #a0a0a0;
+  --text-on-dark: var(--white);
+  --text-on-light: var(--dark-gray-800);
+  --text-link: var(--primary-light);
+  --text-link-hover: var(--primary-color);
+  
+  /* Background colors */
+  --bg-primary: var(--gray-500);
+  --bg-secondary: var(--gray-600);
+  --bg-tertiary: var(--dark-gray-700);
+  --bg-dark: var(--dark-gray-800);
+  
+  /* Border colors */
+  --border-light: var(--gray-400);
+  --border-medium: var(--dark-gray-700);
+  --border-dark: var(--dark-gray-800);
+  
+  /* Button colors */
+  --btn-primary-bg: var(--primary-color);
+  --btn-primary-text: var(--white);
+  --btn-primary-hover: var(--primary-dark);
+  
+  --btn-secondary-bg: var(--secondary-color);
+  --btn-secondary-text: var(--white);
+  --btn-secondary-hover: var(--secondary-dark);
+  
+  --btn-outline-border: var(--primary-light);
+  --btn-outline-text: var(--primary-light);
+  --btn-outline-hover-bg: rgba(67, 97, 238, 0.1);
+  
+  /* Shadow colors and values */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.2);
+  
+  /* Form elements */
+  --input-bg: var(--gray-400);
+  --input-border: 1px solid var(--dark-gray-700);
+  --input-text: var(--text-secondary);
+  --input-placeholder: var(--text-tertiary);
+  --input-focus-border: var(--primary-light);
+  --input-focus-ring: 0 0 0 2px rgba(97, 133, 255, 0.3);
+  
+  /* Auth specific variables */
+  --auth-container-bg: var(--gray-500);
+  --auth-form-bg: var(--gray-400);
+  --auth-card-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  --auth-input-bg: var(--gray-600);
+  --auth-btn-primary-bg: var(--primary-color);
+  --auth-btn-primary-text: var(--white);
+  --auth-divider-color: var(--dark-gray-700);
+  --auth-social-btn-bg: var(--gray-600);
+  --auth-social-btn-hover: var(--gray-500);
+}
+
+/* Dark Theme Specific Components */
+
+/* Auth Container */
+.dark-theme .auth-section {
+  background-color: var(--gray-500);
+  color: var(--text-primary);
+}
+
+.dark-theme .auth-container {
+  background-color: var(--gray-400);
+  box-shadow: var(--auth-card-shadow);
+}
+
+/* Form Elements */
+.dark-theme .auth-form-container {
+  background-color: var(--gray-400);
+}
+
+.dark-theme .auth-welcome h1 {
+  color: var(--text-primary);
+}
+
+.dark-theme .auth-welcome p {
+  color: var(--text-secondary);
+}
+
+.dark-theme .auth-form label {
+  color: var(--text-secondary);
+}
+
+.dark-theme .form-group .input-wrapper {
+  background-color: var(--auth-input-bg);
+  border-color: var(--border-light);
+}
+
+.dark-theme .form-group .input-wrapper:focus-within {
+  border-color: var(--primary-light);
+  box-shadow: var(--input-focus-ring);
+}
+
+.dark-theme .form-group input {
+  color: var(--text-primary);
+  background-color: transparent;
+}
+
+.dark-theme .form-group input::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* Auth Divider */
+.dark-theme .auth-divider {
+  color: var(--text-tertiary);
+}
+
+.dark-theme .auth-divider::before,
+.dark-theme .auth-divider::after {
+  background-color: var(--auth-divider-color);
+}
+
+/* Social Buttons */
+.dark-theme .social-btn {
+  background-color: var(--auth-social-btn-bg);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
+}
+
+.dark-theme .social-btn:hover {
+  background-color: var(--auth-social-btn-hover);
+}
+
+/* Toggle Password Button */
+.dark-theme .password-toggle {
+  color: var(--text-tertiary);
+}
+
+.dark-theme .password-toggle:hover {
+  color: var(--text-secondary);
+}
+
+/* Auth Button */
+.dark-theme .btn-auth {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.dark-theme .btn-auth:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Auth Footer */
+.dark-theme .auth-footer {
+  color: var(--text-secondary);
+}
+
+.dark-theme .auth-footer a {
+  color: var(--primary-light);
+}
+
+.dark-theme .auth-footer a:hover {
+  color: var(--primary-color);
+}
+
+/* Checkbox */
+.dark-theme .form-checkbox input[type="checkbox"] {
+  border-color: var(--border-light);
+}
+
+.dark-theme .form-checkbox input[type="checkbox"]:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Illustration Side */
+.dark-theme .auth-illustration {
+  background-color: var(--gray-500);
+}
+
+.dark-theme .auth-quote {
+  color: var(--text-secondary);
+  background-color: var(--gray-600);
+}
+
+.dark-theme .quote-author {
+  color: var(--text-tertiary);
+}
+
+.dark-theme .quote-author strong {
+  color: var(--text-secondary);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--gray-600);
+  border: none;
+  box-shadow: var(--shadow-md);
+  color: var(--text-primary);
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background-color: var(--gray-500);
+}
+
+.dark-theme .theme-toggle {
+  background-color: var(--primary-dark);
+}
+
+.dark-theme .theme-toggle:hover {
+  background-color: var(--primary-color);
+} 

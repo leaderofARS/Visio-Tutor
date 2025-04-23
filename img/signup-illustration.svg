@@ -1,0 +1,78 @@
+<svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background elements -->
+    <circle cx="250" cy="200" r="170" fill="#F0F7FF" />
+    <circle cx="390" cy="70" r="30" fill="#E6F0FF" />
+    <circle cx="110" cy="330" r="20" fill="#E6F0FF" />
+    
+    <!-- Desk -->
+    <rect x="100" y="280" width="300" height="20" rx="5" fill="#6D7EFC" />
+    <rect x="120" y="300" width="260" height="10" fill="#5466EA" />
+    <rect x="140" y="310" width="220" height="80" fill="#4252D9" />
+    
+    <!-- Laptop -->
+    <rect x="170" y="220" width="160" height="8" rx="2" fill="#2D3A9E" />
+    <rect x="170" y="150" width="160" height="70" rx="5" fill="#4252D9" />
+    <rect x="175" y="155" width="150" height="60" rx="2" fill="#FFFFFF" />
+    
+    <!-- Screen content -->
+    <rect x="185" y="165" width="50" height="10" rx="2" fill="#E9ECFE" />
+    <rect x="185" y="180" width="130" height="5" rx="2" fill="#E9ECFE" />
+    <rect x="185" y="190" width="110" height="5" rx="2" fill="#E9ECFE" />
+    <rect x="185" y="200" width="90" height="5" rx="2" fill="#E9ECFE" />
+    
+    <!-- Form on screen -->
+    <rect x="265" y="165" width="50" height="40" rx="4" fill="#6D7EFC" opacity="0.7" />
+    <rect x="270" y="170" width="40" height="5" rx="1" fill="#FFFFFF" />
+    <rect x="270" y="180" width="40" height="5" rx="1" fill="#FFFFFF" />
+    <rect x="270" y="190" width="40" height="5" rx="1" fill="#FFFFFF" />
+    <rect x="270" y="200" width="20" height="5" rx="1" fill="#F9A23F" />
+    
+    <!-- Student character -->
+    <!-- Head -->
+    <circle cx="120" cy="160" r="30" fill="#FFC2A3" />
+    <path d="M100 145 Q120 130 140 145" stroke="#372E2C" stroke-width="2" fill="none" />
+    <circle cx="110" cy="150" r="2" fill="#372E2C" />
+    <circle cx="130" cy="150" r="2" fill="#372E2C" />
+    <path d="M115 165 Q120 170 125 165" stroke="#372E2C" stroke-width="2" fill="none" />
+    
+    <!-- Hair -->
+    <path d="M90 140 Q100 110 120 110 Q140 110 150 140" fill="#372E2C" />
+    <path d="M150 140 Q152 150 150 160" fill="#372E2C" />
+    
+    <!-- Body -->
+    <path d="M100 190 Q120 180 140 190 L150 280 L90 280 Z" fill="#F9A23F" />
+    
+    <!-- Arms -->
+    <path d="M140 200 Q160 210 170 220" stroke="#FFC2A3" stroke-width="15" stroke-linecap="round" />
+    <path d="M100 200 Q80 230 70 260" stroke="#FFC2A3" stroke-width="15" stroke-linecap="round" />
+    
+    <!-- Floating elements -->
+    <!-- Math symbols -->
+    <text x="380" y="150" font-family="Arial" font-size="20" fill="#6D7EFC">∑</text>
+    <text x="410" y="180" font-family="Arial" font-size="24" fill="#4252D9">π</text>
+    <text x="380" y="210" font-family="Arial" font-size="22" fill="#5466EA">√</text>
+    <text x="350" y="240" font-family="Arial" font-size="18" fill="#6D7EFC">∞</text>
+    
+    <!-- Science icons -->
+    <circle cx="70" cy="150" r="15" stroke="#6D7EFC" stroke-width="2" fill="none" />
+    <circle cx="70" cy="150" r="5" fill="#5466EA" />
+    <circle cx="70" cy="140" r="3" fill="#4252D9" />
+    <circle cx="80" cy="150" r="3" fill="#4252D9" />
+    <circle cx="70" cy="160" r="3" fill="#4252D9" />
+    <circle cx="60" cy="150" r="3" fill="#4252D9" />
+    
+    <!-- Book stack -->
+    <rect x="390" y="270" width="50" height="10" rx="2" fill="#6D7EFC" />
+    <rect x="385" y="280" width="60" height="10" rx="2" fill="#4252D9" />
+    <rect x="380" y="290" width="70" height="10" rx="2" fill="#5466EA" />
+    
+    <!-- Light bulb idea -->
+    <circle cx="70" cy="80" r="15" fill="#F9A23F" opacity="0.8" />
+    <path d="M70 95 L70 105" stroke="#F9A23F" stroke-width="3" />
+    <path d="M65 95 Q70 105 75 95" fill="#F9A23F" />
+    
+    <!-- Decorative lines connecting elements -->
+    <path d="M70 120 Q100 140 140 110" stroke="#E9ECFE" stroke-width="1" stroke-dasharray="5,5" />
+    <path d="M380 150 Q300 170 210 150" stroke="#E9ECFE" stroke-width="1" stroke-dasharray="5,5" />
+    <path d="M70 200 Q150 230 380 210" stroke="#E9ECFE" stroke-width="1" stroke-dasharray="5,5" />
+</svg> 
